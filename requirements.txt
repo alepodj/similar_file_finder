@@ -1,0 +1,20 @@
+# Core dependencies
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.21.1
+sv-ttk==2.6.0
+Pillow==10.0.0
+xxhash==3.5.0
+
+# Optional dependencies for building executables
+# Install ONE of these if you want to build standalone executables:
+# pyinstaller>=5.0.0
+# cx_Freeze>=6.0.0
+
+# Build tools installation commands:
+# For PyInstaller: pip install pyinstaller
+# For cx_Freeze:   pip install cx_Freeze
+
+# Note: tkinter, pathlib, hashlib, difflib, threading, os, time, 
+# multiprocessing, concurrent.futures, itertools, functools, json, 
+# csv, datetime, collections, and typing are part of Python's 
+# standard library and don't need to be installed 

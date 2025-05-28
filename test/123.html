@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Similarity Analysis Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 20px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h3 { color: #2980b9; }
+        .summary { background: #ecf0f1; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+        .metric { display: inline-block; margin: 10px 20px; text-align: center; }
+        .metric-value { font-size: 24px; font-weight: bold; color: #e74c3c; }
+        .metric-label { font-size: 14px; color: #7f8c8d; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #3498db; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        tr:hover { background-color: #e8f4f8; }
+        .group { background: #fff3cd; padding: 10px; margin: 10px 0; border-radius: 5px; border-left: 4px solid #ffc107; }
+        .file-path { font-family: monospace; font-size: 12px; color: #6c757d; }
+        .similarity { font-weight: bold; color: #28a745; }
+        .warning { color: #e74c3c; font-weight: bold; }
+        .info { color: #17a2b8; }
+        .toggle { cursor: pointer; color: #007bff; text-decoration: underline; }
+        .hidden { display: none; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+        .stat-card { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+    </style>
+    <script>
+        function toggleSection(id) {
+            var element = document.getElementById(id);
+            element.classList.toggle('hidden');
+        }
+        function sortTable(tableId, column) {
+            var table = document.getElementById(tableId);
+            var rows = Array.from(table.rows).slice(1);
+            var isNumeric = !isNaN(rows[0].cells[column].textContent);
+            
+            rows.sort(function(a, b) {
+                var aVal = a.cells[column].textContent;
+                var bVal = b.cells[column].textContent;
+                if (isNumeric) {
+                    return parseFloat(aVal) - parseFloat(bVal);
+                }
+                return aVal.localeCompare(bVal);
+            });
+            
+            rows.forEach(function(row) {
+                table.appendChild(row);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>📁 File Similarity Analysis Report</h1>
+        
+        <div class="summary">
+            <h2>📊 Scan Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="metric-value">6</div>
+                    <div class="metric-label">Total Files</div>
+                </div>
+                <div class="stat-card">
+                    <div class="metric-value">0.0 GB</div>
+                    <div class="metric-label">Total Size</div>
+                </div>
+                <div class="stat-card">
+                    <div class="metric-value">1</div>
+                    <div class="metric-label">Duplicate Groups</div>
+                </div>
+                <div class="stat-card">
+                    <div class="metric-value">1</div>
+                    <div class="metric-label">Name Conflicts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="metric-value">2</div>
+                    <div class="metric-label">Similar Names</div>
+                </div>
+                <div class="stat-card">
+                    <div class="metric-value">0.0 GB</div>
+                    <div class="metric-label">Potential Savings</div>
+                </div>
+            </div>
+            <p><strong>Scan Date:</strong> 2025-05-28T00:19:17.316179</p>
+            <p><strong>Workers Used:</strong> 32</p>
+            <p><strong>Similarity Method:</strong> ratio (threshold: 70.0%)</p>
+        </div>
+
+        <h2>🔄 Content Duplicates (1 groups)</h2>
+        <p class="info">Files with identical content - safe to delete extras to save space.</p>
+        <span class="toggle" onclick="toggleSection('duplicates-section')">Show/Hide Details</span>
+        <div id="duplicates-section">
+<div class="group"><h4>Group 1 (2 files)</h4>
+                        <p><strong>doc - Copy.txt</strong> (0.0 MB)<br>
+                        <span class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test\doc - Copy.txt</span><br>
+                        <small>Modified: Tue May 27 23:14:45 2025 | Hash: a665a45920422f9d...</small></p>
+
+                        <p><strong>doc.txt</strong> (0.0 MB)<br>
+                        <span class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt</span><br>
+                        <small>Modified: Tue May 27 23:14:45 2025 | Hash: a665a45920422f9d...</small></p>
+</div></div>
+        <h2>⚠️ Name Conflicts (1 groups)</h2>
+        <p class="warning">Files with same names but different content - review for version conflicts.</p>
+        <span class="toggle" onclick="toggleSection('conflicts-section')">Show/Hide Details</span>
+        <div id="conflicts-section">
+<div class="group"><h4>Group 1 (2 files)</h4>
+                        <p><strong>doc.dat</strong> (0.0 MB)<br>
+                        <span class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test\doc.dat</span><br>
+                        <small>Modified: Tue May 27 23:14:35 2025 | Hash: 688787d8ff144c50...</small></p>
+
+                        <p><strong>doc.txt</strong> (0.0 MB)<br>
+                        <span class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt</span><br>
+                        <small>Modified: Tue May 27 23:14:45 2025 | Hash: a665a45920422f9d...</small></p>
+</div></div>
+        <h2>🔍 Similar Names (2 pairs)</h2>
+        <p class="info">Files with similar names - may indicate related files or typos.</p>
+        <span class="toggle" onclick="toggleSection('similar-section')">Show/Hide Details</span>
+        <div id="similar-section">
+            <table id="similar-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('similar-table', 0)">File 1</th>
+                        <th onclick="sortTable('similar-table', 1)">File 2</th>
+                        <th onclick="sortTable('similar-table', 2)">Similarity</th>
+                        <th onclick="sortTable('similar-table', 3)">Size 1 (MB)</th>
+                        <th onclick="sortTable('similar-table', 4)">Size 2 (MB)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>doc.dat<br><small class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test</small></td>
+                        <td>doc.txt<br><small class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test</small></td>
+                        <td class="similarity">100.0%</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+
+                    <tr>
+                        <td>asd.txt<br><small class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test</small></td>
+                        <td>asd2.txt<br><small class="file-path">C:\Users\aleel\Desktop\similar_file_finder\test</small></td>
+                        <td class="similarity">86.0%</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <h2>📄 File Extensions Analysis</h2>
+        <span class="toggle" onclick="toggleSection('extensions-section')">Show/Hide Details</span>
+        <div id="extensions-section">
+            <table id="extensions-table">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('extensions-table', 0)">Extension</th>
+                        <th onclick="sortTable('extensions-table', 1)">File Count</th>
+                        <th onclick="sortTable('extensions-table', 2)">Total Size (MB)</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>.txt</td>
+                        <td>4</td>
+                        <td>0.0</td>
+                    </tr>
+
+                    <tr>
+                        <td>.html</td>
+                        <td>1</td>
+                        <td>0.0</td>
+                    </tr>
+
+                    <tr>
+                        <td>.dat</td>
+                        <td>1</td>
+                        <td>0.0</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <footer style="margin-top: 50px; text-align: center; color: #7f8c8d; border-top: 1px solid #ddd; padding-top: 20px;">
+            <p>Generated by File Similarity Finder v2.0</p>
+        </footer>
+    </div>
+</body>
+</html>

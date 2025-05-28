@@ -1,0 +1,22 @@
+============================================================
+FILE SIMILARITY ANALYSIS REPORT
+============================================================
+Total files scanned: 4
+
+ALL DUPLICATE FILES (regardless of name): 1 groups
+----------------------------------------
+Group 1:
+  - doc - Copy.txt (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc - Copy.txt
+  - doc.txt (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt
+
+Files with identical content but different names: 1 groups
+----------------------------------------
+Group 1:
+  - doc - Copy.txt (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc - Copy.txt
+  - doc.txt (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt
+
+Files with same names but different content: 1 groups
+----------------------------------------
+Group 1:
+  - doc.dat (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc.dat
+  - doc.txt (3 bytes) - C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt

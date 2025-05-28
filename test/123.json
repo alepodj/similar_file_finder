@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "scan_timestamp": "2025-05-28T00:20:27.689872",
+    "total_files": 6,
+    "total_size_bytes": 11737,
+    "total_size_mb": 0.01,
+    "total_size_gb": 0.0,
+    "max_workers_used": 32,
+    "duplicate_groups": 1,
+    "name_conflict_groups": 1,
+    "potential_space_savings_bytes": 3,
+    "potential_space_savings_mb": 0.0,
+    "potential_space_savings_gb": 0.0,
+    "file_extensions": {
+      ".html": 1,
+      ".txt": 4,
+      ".dat": 1
+    },
+    "size_by_extension_mb": {
+      ".html": 0.01,
+      ".txt": 0.0,
+      ".dat": 0.0
+    }
+  },
+  "scan_parameters": {
+    "similarity_threshold": 70.0,
+    "similarity_method": "ratio",
+    "recursive_scan": true
+  },
+  "content_duplicates": [
+    {
+      "group_id": 1,
+      "files": [
+        {
+          "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc - Copy.txt",
+          "name": "doc - Copy.txt",
+          "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+          "extension": ".txt",
+          "size": 3,
+          "size_mb": 0.0,
+          "modified": "Tue May 27 23:14:45 2025",
+          "modified_timestamp": 1748402085.7449522,
+          "created": "Tue May 27 23:13:09 2025",
+          "created_timestamp": 1748401989.110443,
+          "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+          "hash_short": "a665a45920422f9d"
+        },
+        {
+          "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc.txt",
+          "name": "doc.txt",
+          "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+          "extension": ".txt",
+          "size": 3,
+          "size_mb": 0.0,
+          "modified": "Tue May 27 23:14:45 2025",
+          "modified_timestamp": 1748402085.7449522,
+          "created": "Tue May 27 23:12:59 2025",
+          "created_timestamp": 1748401979.7990942,
+          "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+          "hash_short": "a665a45920422f9d"
+        }
+      ]
+    }
+  ],
+  "name_conflicts": [
+    {
+      "group_id": 1,
+      "files": [
+        {
+          "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc.dat",
+          "name": "doc.dat",
+          "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+          "extension": ".dat",
+          "size": 3,
+          "size_mb": 0.0,
+          "modified": "Tue May 27 23:14:35 2025",
+          "modified_timestamp": 1748402075.309422,
+          "created": "Tue May 27 23:13:57 2025",
+          "created_timestamp": 1748402037.504896,
+          "hash": "688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6",
+          "hash_short": "688787d8ff144c50"
+        },
+        {
+          "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc.txt",
+          "name": "doc.txt",
+          "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+          "extension": ".txt",
+          "size": 3,
+          "size_mb": 0.0,
+          "modified": "Tue May 27 23:14:45 2025",
+          "modified_timestamp": 1748402085.7449522,
+          "created": "Tue May 27 23:12:59 2025",
+          "created_timestamp": 1748401979.7990942,
+          "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+          "hash_short": "a665a45920422f9d"
+        }
+      ]
+    }
+  ],
+  "similar_names": [
+    {
+      "file1": {
+        "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc.dat",
+        "name": "doc.dat",
+        "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+        "extension": ".dat",
+        "size": 3,
+        "size_mb": 0.0,
+        "modified": "Tue May 27 23:14:35 2025",
+        "modified_timestamp": 1748402075.309422,
+        "created": "Tue May 27 23:13:57 2025",
+        "created_timestamp": 1748402037.504896,
+        "hash": "688787d8ff144c502c7f5cffaafe2cc588d86079f9de88304c26b0cb99ce91c6",
+        "hash_short": "688787d8ff144c50"
+      },
+      "file2": {
+        "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\doc.txt",
+        "name": "doc.txt",
+        "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+        "extension": ".txt",
+        "size": 3,
+        "size_mb": 0.0,
+        "modified": "Tue May 27 23:14:45 2025",
+        "modified_timestamp": 1748402085.7449522,
+        "created": "Tue May 27 23:12:59 2025",
+        "created_timestamp": 1748401979.7990942,
+        "hash": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "hash_short": "a665a45920422f9d"
+      },
+      "similarity_percent": 100,
+      "method_used": "ratio"
+    },
+    {
+      "file1": {
+        "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\asd.txt",
+        "name": "asd.txt",
+        "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+        "extension": ".txt",
+        "size": 1024,
+        "size_mb": 0.0,
+        "modified": "Tue May 27 23:53:28 2025",
+        "modified_timestamp": 1748404408.0398715,
+        "created": "Tue May 27 23:53:27 2025",
+        "created_timestamp": 1748404407.726623,
+        "hash": "4839180abdd768a27bc31812f7ca726d3a88064ad3b97328c81849c699784104",
+        "hash_short": "4839180abdd768a2"
+      },
+      "file2": {
+        "path": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test\\asd2.txt",
+        "name": "asd2.txt",
+        "directory": "C:\\Users\\aleel\\Desktop\\similar_file_finder\\test",
+        "extension": ".txt",
+        "size": 1024,
+        "size_mb": 0.0,
+        "modified": "Tue May 27 23:53:39 2025",
+        "modified_timestamp": 1748404419.3683562,
+        "created": "Tue May 27 23:53:39 2025",
+        "created_timestamp": 1748404419.0542386,
+        "hash": "b165f99090894fc00c776072536cd0afe59954b60cb131ce1fd81009725cfe61",
+        "hash_short": "b165f99090894fc0"
+      },
+      "similarity_percent": 86,
+      "method_used": "ratio"
+    }
+  ],
+  "file_statistics": {
+    "by_extension": {
+      ".html": 1,
+      ".txt": 4,
+      ".dat": 1
+    },
+    "size_by_extension_mb": {
+      ".html": 0.01,
+      ".txt": 0.0,
+      ".dat": 0.0
+    }
+  }
+}
