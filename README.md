@@ -7,7 +7,7 @@
 
 A **high-performance** Python application for finding similar files based on content and filename similarity. Optimized with **multiprocessing** and **xxHash** for lightning-fast processing!
 
-![File Similarity Finder Screenshot](https://via.placeholder.com/800x500/2c3e50/ffffff?text=File+Similarity+Finder+GUI)
+![File Similarity Finder Screenshot](https://github.com/alepodj/similar_file_finder/blob/main/screenshot.png)
 
 ---
 
