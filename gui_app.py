@@ -872,14 +872,14 @@ Example: Most accurate character-level matching for edge cases
                 # Set the window icon (this sets both title bar and taskbar icon)
                 self.root.iconphoto(True, self.large_icon_photo, self.medium_icon_photo, self.small_icon_photo)
                 
-                print(f"✅ Icon loaded successfully from: {icon_path}")
+                print(f"[OK] Icon loaded successfully from: {icon_path}")
             else:
-                print(f"⚠️ Icon file not found: {icon_path}")
+                print(f"[WARNING] Icon file not found: {icon_path}")
                 
         except ImportError:
-            print("⚠️ PIL (Pillow) not installed. Install with: pip install Pillow")
+            print("[WARNING] PIL (Pillow) not installed. Install with: pip install Pillow")
         except Exception as e:
-            print(f"⚠️ Error loading icon: {e}")
+            print(f"[WARNING] Error loading icon: {e}")
         
     def toggle_theme(self):
         """Toggle between light and dark themes"""

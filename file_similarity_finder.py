@@ -19,10 +19,10 @@ from datetime import datetime
 try:
     import xxhash
     XXHASH_AVAILABLE = True
-    print("✅ xxHash available - using fast xxh64 hashing")
+    print("[OK] xxHash available - using fast xxh64 hashing")
 except ImportError:
     XXHASH_AVAILABLE = False
-    print("⚠️ xxHash not available - using SHA-256 (install with: pip install xxhash)")
+    print("[WARNING] xxHash not available - using SHA-256 (install with: pip install xxhash)")
 
 # Global functions for multiprocessing (must be at module level)
 def calculate_file_hash_worker(file_path: str, chunk_size: int = 8192) -> Tuple[str, str]:
@@ -872,10 +872,10 @@ class FileSimilarityFinder:
 </head>
 <body>
     <div class="container">
-        <h1>📁 File Similarity Analysis Report</h1>
+        <h1>[FILES] File Similarity Analysis Report</h1>
         
         <div class="summary">
-            <h2>📊 Scan Summary</h2>
+            <h2>[STATS] Scan Summary</h2>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="metric-value">{metadata.get('total_files', 0)}</div>
@@ -911,7 +911,7 @@ class FileSimilarityFinder:
         # Add Content Duplicates section
         if all_duplicates:
             html_content += f"""
-        <h2>🔄 Content Duplicates ({len(all_duplicates)} groups)</h2>
+        <h2>[DUPLICATES] Content Duplicates ({len(all_duplicates)} groups)</h2>
         <p class="info">Files with identical content - safe to delete extras to save space.</p>
         <span class="toggle" onclick="toggleSection('duplicates-section')">Show/Hide Details</span>
         <div id="duplicates-section">
@@ -932,7 +932,7 @@ class FileSimilarityFinder:
         # Add Name Conflicts section
         if same_name_groups:
             html_content += f"""
-        <h2>⚠️ Name Conflicts ({len(same_name_groups)} groups)</h2>
+        <h2>[WARNING] Name Conflicts ({len(same_name_groups)} groups)</h2>
         <p class="warning">Files with same names but different content - review for version conflicts.</p>
         <span class="toggle" onclick="toggleSection('conflicts-section')">Show/Hide Details</span>
         <div id="conflicts-section">
@@ -953,7 +953,7 @@ class FileSimilarityFinder:
         # Add Similar Names section
         if similar_pairs:
             html_content += f"""
-        <h2>🔍 Similar Names ({len(similar_pairs)} pairs)</h2>
+        <h2>[SEARCH] Similar Names ({len(similar_pairs)} pairs)</h2>
         <p class="info">Files with similar names - may indicate related files or typos.</p>
         <span class="toggle" onclick="toggleSection('similar-section')">Show/Hide Details</span>
         <div id="similar-section">
@@ -992,7 +992,7 @@ class FileSimilarityFinder:
         extensions = metadata.get('file_extensions', {})
         if extensions:
             html_content += f"""
-        <h2>📄 File Extensions Analysis</h2>
+        <h2>[EXTENSIONS] File Extensions Analysis</h2>
         <span class="toggle" onclick="toggleSection('extensions-section')">Show/Hide Details</span>
         <div id="extensions-section">
             <table id="extensions-table">
