@@ -1,3 +1,0 @@
-File1_Name,File1_Path,File1_Size_MB,File2_Name,File2_Path,File2_Size_MB,Similarity_Percent,Method_Used
-doc.dat,C:\Users\aleel\Desktop\similar_file_finder\test\doc.dat,0.0,doc.txt,C:\Users\aleel\Desktop\similar_file_finder\test\doc.txt,0.0,100.0,ratio
-asd.txt,C:\Users\aleel\Desktop\similar_file_finder\test\asd.txt,0.0,asd2.txt,C:\Users\aleel\Desktop\similar_file_finder\test\asd2.txt,0.0,86.0,ratio
